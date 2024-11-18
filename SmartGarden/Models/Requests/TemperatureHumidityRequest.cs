@@ -1,6 +1,6 @@
-﻿namespace SharedRequests.SmartGarden.Models;
+﻿namespace SharedRequests.SmartGarden.Models.Requests;
 
-public class TemperatureHumidityRequest
+public class TemperatureHumidityRequest: IRequest
 {
     public TemperatureHumidityRequest() { }
 
