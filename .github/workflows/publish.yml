@@ -10,21 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0
-          
+
       - name: Restore dependencies
         run: dotnet restore
 
       - name: Build project
         run: dotnet build --configuration Release
 
+      - name: Verify version format
+        run: echo "Using version: 1.0.${{ github.run_number }}"
+
       - name: Pack NuGet package
-        run: dotnet pack --configuration Release
+        run: |
+          dotnet pack --configuration Release /p:PackageVersion=1.0.${{ github.run_number }}
 
       - name: Publish to GitHub Packages
         run: dotnet nuget push bin/Release/*.nupkg --source "https://nuget.pkg.github.com/${{ github.actor }}/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}"
