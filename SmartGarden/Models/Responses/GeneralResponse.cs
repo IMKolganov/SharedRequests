@@ -1,6 +1,6 @@
 ﻿namespace SharedRequests.SmartGarden.Models.Responses;
 
-public class GeneralResponse<T> : IResponse
+public class GeneralResponse<T> : IGeneralResponse<T>
 {
     public GeneralResponse()
     {
@@ -12,6 +12,6 @@ public class GeneralResponse<T> : IResponse
     public string Message { get; set; }
     public DateTime ResponseDate { get; set; }
     public string ErrorMessage { get; set; }
-    public T Data { get; set; }
+    public T? Data { get; set; }
     public string Type { get; set; }
 }
