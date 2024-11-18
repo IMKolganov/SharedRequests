@@ -5,7 +5,7 @@ public class TemperatureHumidityResponse : IResponse
 
     public TemperatureHumidityResponse()
     {
-        
+        Type = nameof(TemperatureHumidityResponse);
     }
     
     public TemperatureHumidityResponse(
@@ -23,6 +23,7 @@ public class TemperatureHumidityResponse : IResponse
         Temperature = temperature;
         Humidity = humidity;
         ResponseDate = DateTime.UtcNow;
+        Type = nameof(TemperatureHumidityResponse);
     }
     
     public Guid RequestId { get; set; }
