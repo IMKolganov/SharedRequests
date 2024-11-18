@@ -27,6 +27,7 @@ public class SoilMoistureResponse: IResponse
     public bool Success { get; set; }
     public int SensorId { get; set; }
     public string Message { get; set; }
+    public string ErrorMessage { get; set; }
     public DateTime ResponseDate { get; set; }
     public double? SoilMoistureLevelPercent { get; set; }
     public string Type { get; set; }

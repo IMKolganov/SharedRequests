@@ -8,7 +8,7 @@
         <Authors>IMKolganov</Authors>
         <Company>RackotProduction</Company>
         <PackageId>SharedRequests</PackageId>
-        <Version>1.0.7</Version>
+        <Version>1.0.8</Version>
         <Description>Shared request models for distributed services</Description>
         <PackageTags>Shared;Requests;Distributed</PackageTags>
         <RepositoryUrl>https://github.com/IMKolganov/SharedRequests</RepositoryUrl>

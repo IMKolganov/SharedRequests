@@ -11,6 +11,7 @@ public class PumpSwitcherResponse: IResponse
     public bool Success { get; set; }
     public int? PumpId { get; set; }
     public string? Message { get; set; }
+    public string ErrorMessage { get; set; }
     public DateTime ResponseDate { get; set; }
     public string Type { get; set; }
 }
